@@ -32,3 +32,6 @@ config:
 ```
 artillery run artillery-test-fn.yml
 ```
+## Monitoring
+- [Metrics](https://docs.microsoft.com/en-us/azure/azure-functions/monitor-metrics?tabs=portal) show the request count
+- You can enable [scale controller logs](https://docs.microsoft.com/en-us/azure/azure-functions/configure-monitoring?tabs=v2#configure-scale-controller-logs)
