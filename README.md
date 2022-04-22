@@ -1,5 +1,5 @@
 # loadtest-azure-fn
-example script to load test an azure function to show scaling
+Example script to load test an azure function to show scaling
 
 ## Setup 
 1. install Artillery
@@ -54,9 +54,13 @@ traces
 ### Sample logs
 ![Screenshot from Azure Portal](./sample-logs.jpg "Title")
 
+## Creating an alert
+To create an Alert based on log query you can follow the [Azure Docs Tutorial](https://docs.microsoft.com/en-us/azure/azure-monitor/alerts/tutorial-log-alert)
+
 ## Useful links
-- [Scale](https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale#scale)
+- [Scale](https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale#scale) information for Azure Functions based on hosting plan
 - Premium - [max scalout](https://docs.microsoft.com/en-us/azure/azure-functions/functions-premium-plan?tabs=portal#region-max-scale-out)
+
 
 ## Example scenario - Premium functions
 Based on pricing in AU$ at April 2022 (No EA discounts included)
