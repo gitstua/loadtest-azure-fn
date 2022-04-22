@@ -51,8 +51,22 @@ traces
 | extend PreviousInstanceCount = CustomDimensions.PreviousInstanceCount
 | extend NewInstanceCount = CustomDimensions.CurrentInstanceCount
 ```
-
+### Sample logs
+![Screenshot from Azure Portal](./sample-logs.jpg "Title")
 
 ## Useful links
 - [Scale](https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale#scale)
 - Premium - [max scalout](https://docs.microsoft.com/en-us/azure/azure-functions/functions-premium-plan?tabs=portal#region-max-scale-out)
+
+## Example scenario - Premium functions
+Based on pricing in AU$ at April 2022 (No EA discounts included)
+
+Azure functions premium has minumum of one running instance at all times. Scaling out to more instances and back in occurs automatically based on load. Scaling in back to a single instance may take 5-10 minutes after load reduces.
+
+### Sample costs
+- Premium function instance **730 hours** = 885.32
+- 3 Additional instances during **184 working hours** = 669.45
+- Estimated monthly total = 1,554.77
+
+Example calculator:
+https://azure.com/e/cb7b654e276a4569b6b807c47ed52861
