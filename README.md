@@ -34,4 +34,13 @@ artillery run artillery-test-fn.yml
 ```
 ## Monitoring
 - [Metrics](https://docs.microsoft.com/en-us/azure/azure-functions/monitor-metrics?tabs=portal) show the request count
-- You can enable [scale controller logs](https://docs.microsoft.com/en-us/azure/azure-functions/configure-monitoring?tabs=v2#configure-scale-controller-logs)
+- You can enable [scale controller logs (preview)](https://docs.microsoft.com/en-us/azure/azure-functions/configure-monitoring?tabs=v2#configure-scale-controller-logs) - you need to add an appsetting using the portal or a script
+```bash
+az functionapp config appsettings set --name <FUNCTION_APP_NAME> \
+--resource-group <RESOURCE_GROUP_NAME> \
+--settings SCALE_CONTROLLER_LOGGING_ENABLED=AppInsights:Verbose
+```
+
+## Useful links
+- [Scale](https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale#scale)
+- Premium - [max scalout](https://docs.microsoft.com/en-us/azure/azure-functions/functions-premium-plan?tabs=portal#region-max-scale-out)
