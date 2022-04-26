@@ -33,8 +33,12 @@ config:
 artillery run artillery-test-fn.yml
 ```
 ## Monitoring
+| :warning: WARNING          |
+|:---------------------------|
+| Azure Functions premium hosting plan offers scale controller logs in preview      |
+
 - [Metrics](https://docs.microsoft.com/en-us/azure/azure-functions/monitor-metrics?tabs=portal) show the request count
-- You can enable [scale controller logs (preview)](https://docs.microsoft.com/en-us/azure/azure-functions/configure-monitoring?tabs=v2#configure-scale-controller-logs) - you need to add an appsetting using the portal or a script
+- You can enable [scale controller logs (preview)](https://docs.microsoft.com/en-us/azure/azure-functions/configure-monitoring?tabs=v2#configure-scale-controller-logs) - you need to add an appsetting ```SCALE_CONTROLLER_LOGGING_ENABLED=AppInsights:Verbose``` using the portal or a script as per below
 ```bash
 az functionapp config appsettings set --name <FUNCTION_APP_NAME> \
 --resource-group <RESOURCE_GROUP_NAME> \
