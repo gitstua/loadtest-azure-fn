@@ -45,7 +45,7 @@ az functionapp config appsettings set --name <FUNCTION_APP_NAME> \
 --settings SCALE_CONTROLLER_LOGGING_ENABLED=AppInsights:Verbose
 ```
 - you can then [query your scale controller logs](https://docs.microsoft.com/en-us/azure/azure-functions/analyze-telemetry-data#query-scale-controller-logs)
-- example Kusto Query
+- example Kusto Query:
 ```pwsh
 traces 
 | extend CustomDimensions = todynamic(tostring(customDimensions))
